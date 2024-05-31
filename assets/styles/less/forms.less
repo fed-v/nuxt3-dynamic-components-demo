@@ -1,0 +1,228 @@
+
+*:disabled {
+    background: var(--color-grey-2);
+    border: 1px solid var(--color-grey-6);
+}
+
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+select {
+    max-height: 40px;
+}
+    
+
+input[type=checkbox] {
+    zoom: 1.5;
+}
+
+.icon-btn {
+    align-self: end;
+    margin-bottom: 20px;
+    background-color: transparent !important; /* This is because the wavelo-nuxt-module has a background color by default */
+
+    &.centered {
+        align-self: center;
+    }
+}
+
+.form-group {
+    display: flex;
+
+    .input-container {
+        margin-right: 24px;
+        width: 100%;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+}
+
+
+.input-container {
+    margin-bottom: 16px;
+
+    &.medium {
+        max-width: 300px;
+    }
+
+    &:last-child {
+        margin-bottom: 18px;
+    }
+}
+
+
+.input-container.checkbox {
+    display: flex;
+
+    input,
+    label {
+        margin: 0;
+    }
+
+    label {
+        margin-left: 10px;
+    }
+
+}
+
+
+
+
+.form-input {
+    color: var(--color-grey-10);
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--color-grey-7);
+    padding: 10px 12px;
+    margin: 0;
+
+    &:active,
+    &:focus {
+        box-shadow: 0px 0px 0px 2px var(--color-white), 0px 0px 0px 4px var(--color-primary-7);
+        border: 1px solid var(--color-grey-7);
+    }
+
+    &.error {
+        box-shadow: none;
+        border: 1px solid red;
+    }
+
+    &.search-input {
+        margin: 0;
+        background-image: url(/assets/images/search.svg);
+        background-repeat: no-repeat;
+        background-position-x: 7px;
+        background-position-y: 9px;
+        padding-left: 40px;
+        background-size: 20px;
+    }
+
+    &.select {
+        background-image: url(/assets/images/chevron-down.svg);
+        background-repeat: no-repeat;
+        background-position-x: 98%;
+        background-position-y: center;
+    }
+
+    &.textarea {
+        height: 125px;
+    }
+}
+
+
+.input-label {
+    color: var(--color-grey-10);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 8px;
+
+    .required {
+        color: var(--color-primary-7);
+    }
+}
+
+
+.error-msg {
+    color: var(--color-error-8);
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 8px;
+
+    &::before {
+        content: '';
+        background: url(/assets/images/errorIcon.svg) no-repeat;
+        height: 14px;
+        width: 14px;
+        margin-right: 10px;
+        display: inline-block;
+        top: 2px;
+        position: relative;
+    }
+}
+
+
+
+
+
+
+ /* Mobile portrait styles: 479px and down */
+ .empty-sideBar {
+    display: none;
+}
+
+.form-section {
+    width: 100%;
+}
+
+.login-form,
+.success-msg {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.form-section header {
+    margin-bottom: 24px;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    font-size: 14px;
+
+    .input-label {
+        font-weight: 400;
+        margin: 0 0 0 19px;
+    }
+
+    div {
+        display: flex;
+    }
+}
+
+
+
+/* Mobile landscape styles: 767px and down */
+@media all and (min-width: @bp-portrait) {
+
+}
+
+/* Tablet styles: 992px and down */
+@media all and (min-width: @bp-landscape) {
+
+    .forms-page {
+        display: flex;
+    }
+
+    .login-form,
+    .success-msg {
+        width: 60%;
+        margin: auto;
+    }
+
+    .form-section {
+        width: 50%;
+        align-self: center;
+    }
+
+    .empty-sideBar {
+        width: 50%;
+        height: 100vh;
+        display: block; 
+        background: var(--color-primary-8);
+    }
+
+}
+
+ /* Desktop styles: 992px and down */
+ @media all and (min-width: @bp-desktop) {
+   
+}

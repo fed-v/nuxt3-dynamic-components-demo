@@ -1,0 +1,48 @@
+.empty-layout-container {
+    width: 100%;
+}
+
+a.text-link {
+    color: var(--color-primary-8);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    /*line-height: 100%;*/
+}
+
+table td {
+    text-align: center;
+}
+
+
+/* This is temporary to overwrite tailwind .outline styles */
+.outline {
+    outline-style: none !important;
+}
+
+/* Status Pill for Invoices and Payments */
+
+.pill {
+    border-radius: 2px;
+    background: #CEE3ED;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-right: 12px;
+    color: #2F576B;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133%; 
+
+    &.due {
+        background: #FFDB94;
+        color: #734C00;
+    }
+
+    &.paid {
+        background: #CEE3ED;
+        color: #2F576B;
+    }
+}

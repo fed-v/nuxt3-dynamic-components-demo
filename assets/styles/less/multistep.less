@@ -1,0 +1,251 @@
+
+
+.form-container {
+    width: 100%;
+}
+
+
+/* To make the footer go right to the bottom of the screen, I broke the Header and the Footer out of the flow with position
+absolute. Then I gave the content wrapper inside the Form element a min-height of 100vh so it occupies the entire height of the page. 
+This makes it go underneath the Header and Footer. To make the content move out of the Header and Footer, I simply added
+padding that is the amount of their respective heights. */
+
+.stepper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 56px;
+    border-bottom: 1px solid var(--color-grey-5);
+    height: 72px;
+    padding: 0 32px;
+    z-index: 1000;
+    
+    /* I need to break this header from the flow so that the Form which has min-height: 100vh occupies the entire height of the screen */
+    position: absolute;
+    width: 100%;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+}
+
+.header-title ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: var(--color-grey-8);
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 145%; /* 15.95px */
+    padding: 0;
+    margin-left: 40px;
+
+    li {
+        margin-right: 20px;
+
+        &.current {
+            color: var(--color-primary-8);
+        }
+
+        &.filled {
+            color: var(--color-primary-10);
+        }
+    }
+}
+
+
+.stepper-form {
+    width: 100%;
+    color: #000;
+    position: relative;  /* This allows the absolute positioned footer to go right beneath the content of the Form*/
+
+
+    .solid-btn, 
+    .outline-btn {
+        margin-right: 16px;
+    }
+
+    .solid-btn:last-child,
+    .outline-btn:last-child {
+        margin: 0;
+    }
+
+    .section-title {
+        margin-bottom: 24px;
+    }
+
+}
+
+.stepper-form {
+    .form-group[data-v-36fac733]:last-child {
+        margin-bottom: 56px;
+    }
+}
+
+.centered-form-template {
+    width: 600px;
+    margin: auto;
+
+    /* This is the main content of the Form. It has 100% of the window height. The padding is the height of the top header 
+    so that it pushes away from the top. Same with the padding bottom. Pushes away from the footer height */
+    min-height: 100vh;
+    padding: 128px 0 72px 0;
+}
+
+.form-title {
+    margin-bottom: 20px;
+}
+
+.stepper-form footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 1px solid var(--color-grey-5);
+    height: 72px;
+    padding: 0 32px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    div {
+        display: flex;
+    }
+
+    button{
+        margin-left: 20px;
+    }
+}
+
+
+.review-submission {
+
+    h5 {
+        margin-bottom: 24px;
+    }
+
+    .horizontal-group {
+        display: flex;
+
+        div {
+            width: 50%;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+
+.section-header {
+    margin-bottom: 24px;
+
+    h4 {
+        margin: 0;
+    }
+}
+
+.review-seperator {
+    margin: 32px 0;
+}
+
+.subscription-details-containers {
+    width: 500px;
+}
+
+
+.subscription-details {
+    border: 1px solid var(--color-grey-6);
+    padding: 24px;
+    width: 400px;
+    margin-top: 128px;
+
+    color: var(--color-grey-10);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 143%; /* 20.02px */
+
+    .one-time-container {
+        margin: 35px 0;
+    }
+
+    h6 {
+        margin-bottom: 10px;
+    }
+
+    hr {
+        margin: 6px 0;
+    }
+
+    .grand {
+        margin-top: 15px;
+    }
+
+    .tax,
+    .subscription {
+        margin-bottom: 8px;
+    }
+}
+
+.recurring-sub,
+.onetime-sub,
+.total-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscription-card {
+    border: 1px solid var(--color-grey-6);
+    padding: 24px;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%; /* 15.95px */
+    margin-bottom: 14px;
+
+    .cost-container {
+        margin-bottom: 8px;
+    }
+
+    strong {
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 143%; /* 20.02px */
+    }
+}
+
+.subscriptions-list {
+    
+    .input-container {
+        margin-bottom: 0;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid var(--color-grey-6);
+    }
+
+    &:last-child {
+        margin-bottom: 54px;
+    }
+
+}
+
+
+.tiny-text {
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%; /* 15.95px */
+}
+
+.error{
+    color: red;
+}
