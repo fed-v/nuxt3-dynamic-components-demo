@@ -3,9 +3,9 @@
     <footer>
 
         <div>
-            <button class="primary outline" v-if="currentStep !== 0" type="button" @click="handlePrevStep">Back</button>
-            <button class="primary" v-if="currentStep !== limit" type="submit">Save and continue</button>
-            <button class="primary" v-if="currentStep === limit" type="submit">Finish</button>
+            <button class="outline-btn" v-if="currentStep !== 0" type="button" @click="handlePrevStep">Back</button>
+            <button class="solid-btn" v-if="currentStep !== limit" type="submit">Save and continue</button>
+            <button class="solid-btn" v-if="currentStep === limit" type="submit">Finish</button>
         </div>
         
     </footer>

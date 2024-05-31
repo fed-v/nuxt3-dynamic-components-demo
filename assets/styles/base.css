@@ -21,28 +21,3 @@ table td {
     outline-style: none !important;
 }
 
-/* Status Pill for Invoices and Payments */
-
-.pill {
-    border-radius: 2px;
-    background: #CEE3ED;
-    padding: 2px 8px;
-    border-radius: 2px;
-    margin-right: 12px;
-    color: #2F576B;
-    font-family: Inter;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 133%; 
-
-    &.due {
-        background: #FFDB94;
-        color: #734C00;
-    }
-
-    &.paid {
-        background: #CEE3ED;
-        color: #2F576B;
-    }
-}

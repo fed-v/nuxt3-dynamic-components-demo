@@ -3,7 +3,7 @@
     <div class="stepper-header">
         
         <div class="header-title">
-            <h4 class="title">{{ title }}</h4>
+            <h2 class="title">{{ title }}</h2>
             <ul>
                 <li v-for="(step, index) in steps" :key="index" :class="{ current: currentStep === index, filled: currentStep > index }">
                     {{ step }}
@@ -12,7 +12,7 @@
         </div>
 
         <div>
-            <NuxtLink class="text-link" :to='to'>Cancel</NuxtLink>
+            <NuxtLink class="link-btn" :to='to'>Cancel</NuxtLink>
         </div>
 
     </div>

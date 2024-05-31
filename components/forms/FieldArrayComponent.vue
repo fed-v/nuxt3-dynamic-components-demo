@@ -20,7 +20,7 @@
 
         </div>
 
-        <button class="text-button" type="button" @click="push({type:'', number:''})">+ Add another</button>
+        <button class="solid-btn" type="button" @click="push({type:'', number:''})">+ Add another</button>
 
     </FieldArray>
 </template>

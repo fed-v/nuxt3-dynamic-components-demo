@@ -13,6 +13,13 @@ button {
 .icon-btn {
     padding: 0;
     height: fit-content;
+    border: none;
+    align-self: center;
+    margin-top: 10px;
+
+    &.centered {
+        align-self: center;
+    }
 
     img {
         max-width: unset;
@@ -67,25 +74,3 @@ button {
     display: flex;
     align-items: center;
 }
-
-.error-btn {
-    background: #E00000;
-    border: 1px solid #E00000;
-    color: #fff;
-    width: 100%;
-    padding: 13px 20px;
-    border-radius: 4px;
-    width: auto;
-
-    display: flex;
-    align-items: center;
-}
-
-// This should be set in base.css
-.primary {
-    &.search {
-        border-radius: 0 4px 4px 0;
-    }
-}
-
-

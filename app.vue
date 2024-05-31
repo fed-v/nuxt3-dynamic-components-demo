@@ -18,8 +18,6 @@
 
       </Form>
 
-      <pre>{{ currentStep }}</pre>
-
   </div>
 
 </template>
