@@ -8,7 +8,6 @@ export default defineNuxtConfig({
 
   css: [
     '@/assets/styles/reset.css',
-    '@/assets/styles/base.css',
     '@/assets/styles/wavelo-global.css',
     '@/assets/styles/global.css',
   ],

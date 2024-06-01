@@ -54,5 +54,5 @@
     10. Removes the focus outline for all elements
   */
   *:focus {
-    outline:none !important
+    outline: none !important
   }

@@ -24,16 +24,20 @@
 
 <script lang="ts" setup>
 
-    import StepOne from '~/components/forms/multistep/customer/StepOne.vue';
-    import StepTwo from '~/components/forms/multistep/customer/StepTwo.vue';
-    import StepThree from '~/components/forms/multistep/customer/StepThree.vue';
+  import useToast from "~/composables/useToast";
+  import { POSITION } from "vue-toastification";
+
+
+  import StepOne from '~/components/forms/multistep/customer/StepOne.vue';
+  import StepTwo from '~/components/forms/multistep/customer/StepTwo.vue';
+  import StepThree from '~/components/forms/multistep/customer/StepThree.vue';
 
 
   // The current step
   const currentStep = ref(0);
 
   // The steps titles for the header breadcrumb
-  const steps = ['1. Customer', '2. Service address', '3. Review'];
+  const steps = ['1. Customer information', '2. Service address', '3. Review'];
 
   // The total number of steps (because it's zero-based, we subtract 1 from the length of the steps array)
   const totalSteps = steps.length -1;
@@ -70,13 +74,24 @@
 
 
 
-  function nextStep(values: any): void {
+  function nextStep(values: any, { resetForm }): void {
 
     if (currentStep.value === totalSteps) {
             
       console.log("Values being passed: " + JSON.stringify(values));
 
-      return;
+      // reset the form and the field values to their initial values
+      resetForm();
+
+      // reset the current step to the first step
+      currentStep.value = 0;
+
+      useToast().success("Form was submitted successfully", {
+            position: POSITION.TOP_CENTER,
+            hideProgressBar: true,
+            closeButton: false,
+            toastClassName: "my-custom-toast-class"
+        });
 
     } else {
 
