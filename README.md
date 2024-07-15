@@ -9,6 +9,8 @@ Features for the application include:
 * Dynamic components using  Vue component syntax and using keep alive to keep form inputs complete during navigation.
 * Vee Validate Field Array component used to manage repeatable array fields. 
 
+## Tech Stack
+[![My Skills](https://skillicons.dev/icons?i=vue,nuxt,html,css,less)](https://skillicons.dev)
 
 
 
