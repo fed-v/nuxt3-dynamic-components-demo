@@ -8,17 +8,10 @@ Features for the application include:
 * Multi-form with next and previous step navigation using Vee Validate
 * Dynamic components using  Vue component syntax and using keep alive to keep form inputs complete during navigation.
 * Vee Validate Field Array component used to manage repeatable array fields. 
+* Dockerfile to efficiently build the application in both development and production environments while keeping the final production image as lean as possible.
 
 ## Tech Stack
-[![My Skills](https://skillicons.dev/icons?i=vue,nuxt,html,css,less)](https://skillicons.dev)
-
-
-
-
-
-
-
-
+[![My Skills](https://skillicons.dev/icons?i=vue,nuxt,html,css,less,docker)](https://skillicons.dev)
 
 
 # Nuxt 3 Minimal Starter
@@ -96,3 +89,29 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Docker
+
+Create and start the development container:
+
+  ```bash
+  docker compose up --build -d
+  ```
+  
+Stop and remove the development container:
+
+  ```bash
+  docker compose down
+  ```
+
+Create and start the production container:
+
+  ```bash
+  docker compose -f compose.production.yaml up --build -d
+  ```
+
+Stop and remove the production container:
+
+  ```bash
+  docker compose -f compose.production.yaml down
+  ```
