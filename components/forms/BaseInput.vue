@@ -24,12 +24,13 @@
             :aria-disabled="disabled ? 'true' : 'false'"
             :aria-invalid="error.error ? 'true' : 'false'"
             :aria-required="rules.includes('required') ? 'true' : 'false'"
-            :aria-describedby="`${name}-error`"
+            :aria-describedby="error.error ? `${name}-error` : null"
             :autocomplete="autocomplete"
             @input="$emit('update:boundValue', $event.target.value)" 
         />
         
         <ErrorMessage 
+            :id="`${name}-error`" 
             class="error-msg" 
             :name="name" 
             role="alert" 

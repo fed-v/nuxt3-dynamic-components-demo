@@ -49,7 +49,7 @@
                     aria-label="Delete phone number {{ idx + 1 }}" 
                     aria-live="polite"
                 >
-                    <img src="@/assets/images/trash-can.svg" width="16" height="16" title="Delete" alt="Delete">
+                    <img src="@/assets/images/trash-can.svg" width="16" height="16" alt="Delete">
                 </button>
 
             </fieldset>
