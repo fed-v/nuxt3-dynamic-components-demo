@@ -3,6 +3,7 @@
     <div class="input-container">
 
         <label 
+            :id="`${name}-label`"
             class="input-label" 
             :for="name">
                 {{ label }}
@@ -12,20 +13,28 @@
         <Field
             :id="name"
             class="form-input"
+            role="textbox"
             :rules="rules"
             :class="`${classes ? classes : ''} ${error ? error : ''}`"
             :type="type"
             :name="name"
             :value="boundValue"
             :disabled="disabled"
+            :aria-labelledby="`${name}-label`"
             :aria-disabled="disabled ? 'true' : 'false'"
             :aria-invalid="error.error ? 'true' : 'false'"
+            :aria-required="rules.includes('required') ? 'true' : 'false'"
             :aria-describedby="`${name}-error`"
             :autocomplete="autocomplete"
             @input="$emit('update:boundValue', $event.target.value)" 
         />
         
-        <ErrorMessage class="error-msg" :name="name" role="alert" />
+        <ErrorMessage 
+            class="error-msg" 
+            :name="name" 
+            role="alert" 
+            aria-live="assertive" 
+        />
         
     </div>
 </template>
