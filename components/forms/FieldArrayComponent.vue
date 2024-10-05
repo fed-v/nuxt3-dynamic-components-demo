@@ -4,8 +4,8 @@
         <div class="form-group" v-for="(entry, idx) in fields" :key="entry.key">
 
             <div class="input-container">
-                <label class="input-label" for="market">Phone type</label>
-                <Field as="select" class="form-input select" :name="`phone[${idx}].type`" id="market" rules="required">
+                <label class="input-label" :for="`phone[${idx}].type`">Phone type</label>
+                <Field as="select" class="form-input select" :name="`phone[${idx}].type`" :id="`phone[${idx}].type`" rules="required">
                     <option value="" disabled selected>-- Select --</option>
                     <option value="home">Home</option>
                     <option value="mobile">Mobile phone</option>
@@ -14,13 +14,13 @@
 
             <FormsBaseInput type="text" label="Phone number" :name="`phone[${idx}].number`" rules="required" />
 
-            <button class="icon-btn" type="button" @click="remove(idx)">
+            <button class="icon-btn" type="button" @click="remove(idx)" aria-live="polite">
                 <img src="@/assets/images/trash-can.svg" width="16" height="16" title="Delete" alt="Delete">
             </button>
 
         </div>
 
-        <button class="solid-btn" type="button" @click="push({type:'', number:''})">+ Add another</button>
+        <button class="solid-btn" type="button" @click="push({type:'', number:''})" aria-live="polite">+ Add another</button>
 
     </FieldArray>
 </template>

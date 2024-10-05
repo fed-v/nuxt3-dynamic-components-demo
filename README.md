@@ -9,6 +9,7 @@ Features for the application include:
 * Dynamic components using  Vue component syntax and using keep alive to keep form inputs complete during navigation.
 * Vee Validate Field Array component used to manage repeatable array fields. 
 * Dockerfile to efficiently build the application in both development and production environments while keeping the final production image as lean as possible.
+* Enhanced accessibility through the use of aria attributes (e.g., aria-invalid, aria-describedby) and appropriate roles (e.g., role="alert") to provide better context and error handling for users with assistive technologies.
 
 ## Tech Stack
 [![My Skills](https://skillicons.dev/icons?i=vue,nuxt,html,css,less,docker)](https://skillicons.dev)
