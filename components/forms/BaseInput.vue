@@ -18,7 +18,7 @@
             :name="name"
             :value="boundValue"
             :disabled="disabled"
-            :aria-invalid="error[name] ? 'true' : 'false'"
+            :aria-invalid="error.error ? 'true' : 'false'"
             :aria-describedby="`${name}-error`"
             :autocomplete="autocomplete"
             @input="$emit('update:boundValue', $event.target.value)" 
