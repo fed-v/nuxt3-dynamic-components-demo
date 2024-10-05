@@ -9,7 +9,7 @@
         <FormsBaseInput type="text" label="Last name" name="lastName" rules="required" :error="{error : errors.lastName}" autocomplete="family-name" />
     </div>
 
-    <FormsBaseInput type="text" label="Business name" name="businessName" :error="{error : errors.businessName}" autocomplete="business" />
+    <FormsBaseInput type="text" label="Business name" name="businessName" :error="{error : errors.businessName}" autocomplete="business" disabled="true" />
 
     <FormsBaseInput type="email" label="email" name="email" rules="required|email" :error="{error : errors.email}" />
 

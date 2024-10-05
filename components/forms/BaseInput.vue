@@ -18,6 +18,7 @@
             :name="name"
             :value="boundValue"
             :disabled="disabled"
+            :aria-disabled="disabled ? 'true' : 'false'"
             :aria-invalid="error.error ? 'true' : 'false'"
             :aria-describedby="`${name}-error`"
             :autocomplete="autocomplete"
