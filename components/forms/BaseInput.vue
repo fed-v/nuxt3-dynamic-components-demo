@@ -2,7 +2,11 @@
     <!-- inputContainers encapsulate input tags, label tags and error messages -->
     <div class="input-container">
 
-        <label class="input-label" :for="name">{{ label }}</label>
+        <label 
+            class="input-label" 
+            :for="name">
+                {{ label }}
+        </label>
 
         <!-- The default value of this Input can be passed via v-model. When the value is changed, it will emit its value to the parent -->
         <Field
@@ -17,8 +21,9 @@
             :aria-invalid="error[name] ? 'true' : 'false'"
             :aria-describedby="`${name}-error`"
             :autocomplete="autocomplete"
-            @input="$emit('update:boundValue', $event.target.value)"
+            @input="$emit('update:boundValue', $event.target.value)" 
         />
+        
         <ErrorMessage class="error-msg" :name="name" role="alert" />
         
     </div>
@@ -26,44 +31,42 @@
 
 <script lang="ts" setup>
 
-const {
-    type,
-    name,
-    label,
-    rules,
-    error,
-    boundValue,
-    disabled,
-    classes,
-    autocomplete,
-  } = defineProps({
+    const { type, name, label, rules, error, boundValue, disabled, classes, autocomplete } = defineProps({
         type: {
             type: String,
             required: true,
+            default: '',
+            
         },
         name: {
             type: String,
             required: true,
+            default: '',
         },
         label: {
             type: String,
             required: true,
+            default: '',
         },
         rules: {
             type: String,
             required: false,
+            default: '',
         },
         error: {
-            type: String,
+            type: Object,
             required: false,
+            default: () => ({}),
         },
         boundValue: {
             type: String,
             required: false,
+            default: '',
         },
         disabled: {
             type: Boolean,
             required: false,
+            default: false,
         },
         classes: {
             type: String,
